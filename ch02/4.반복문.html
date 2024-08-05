@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>4.반복문</title>
+        <!-- 
+        날짜: 2024/08/05
+        이름 : 하진희
+        내용 : 반복문 실습하기
+    -->
+
+</head>
+<body>
+
+    <h3>4.반복문</h3>
+
+    <h4>for</h4>
+    <script>
+        //for문안의 const 는 사용할 수 없다. = > 상수이기때문에 연산불가능  고정된 값
+        for(let i=1;i<=5;i++){
+            document.write('i : '+i+'<br>');
+        }
+        //1부터 10까지 합
+        document.write('<br>');
+        let sum=0;
+        for(let i=1;i<=10;i++){
+            sum += i;
+        }
+
+        document.write('1부터 10까지 합 : '+sum+'<br>')
+
+        document.write('<br>');
+        //1부터 10까지 짝수 합
+        let sum2=0
+        for(let i=1;i<=10;i++){
+            if(i%2==0){
+                sum2+=i;
+            }
+        }
+
+        document.write('1부터 10까지 짝수합 : '+sum2+'<br>')
+        document.write('<br>');
+
+        //별 삼각형
+        let count=0;
+        let n=5;
+        for(let i=0;i<5;i++){
+            count++;
+            for(let j=0 ;j<n-count;j++){
+                document.write('_')
+            }
+            for(let k=0;k<2*count-1;k++){
+                document.write('*')
+            }
+            document.write('<br>');
+
+        }
+        
+
+
+    </script>
+
+
+    <h4>while</h4>
+        <script>
+            let total=0;
+            let k=1;
+
+            while(k<=10){
+                total += k;
+                k++;
+            }
+
+            document.write('1부터 10까지의 합 : '+total+'<br>');
+
+            //do-while
+
+
+
+
+            //break
+
+            let num=1;
+            while(true){
+                if(num%5==0 && num%7==0){
+                    break;
+                }
+
+                num++;
+            }
+
+            document.write('5와 7의 최소공배수 : '+num+'<br>');
+
+
+            //continue
+            let tot=0;
+            for( let i=1;i<=10;i++){
+                if(i%2==1){
+                    continue;
+                }
+                tot+=i;
+            }
+            document.write('1부터 10까지 짝수 합 : '+tot+'<br>');
+
+        </script>
+
+        <h4>구구단</h4>
+
+        <table border="1">
+            <tr>
+                <th>2단</th>
+                <th>3단</th>
+                <th>4단</th>
+                <th>5단</th>
+                <th>6단</th>
+                <th>7단</th>
+                <th>8단</th>
+                <th>9단</th>
+            </tr>
+        <script>
+            
+            
+            
+            for(let y=1;y<=9; y++){
+                document.write('<tr>');
+                    for(let x=2;x<=9;x++){
+                        document.write('<td>'+x+' X '+y+' = '+x*y+'</td>');
+
+                    }
+                    document.write('</tr>');
+                }
+
+        </script>
+
+
+        </table>
+            
+                
+        
+
+
+
+        
+        
+</body>
+</html>
