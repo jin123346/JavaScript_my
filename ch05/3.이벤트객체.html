@@ -60,7 +60,7 @@
                 e.preventDefault();
                 
                 const result = document.getElementById('result');
-                const span = document.getElementsByTagName('span');
+                const span = result.getElementsByTagName('span');
 
                 span[0].innerText = e.target.userid.value;
                 span[1].innerText = e.target.pass.value;
